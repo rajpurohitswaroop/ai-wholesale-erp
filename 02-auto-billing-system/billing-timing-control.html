@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Billing Timing Control</title>
+
+<link rel="stylesheet" href="../../assets/css/global.css">
+<link rel="stylesheet" href="../../assets/css/billing.css">
+
+<style>
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:30px;
+    margin-top:30px;
+}
+
+h1{
+    color:#38bdf8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+input,select{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+}
+
+button{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:14px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.status{
+    margin-top:20px;
+    color:#4ade80;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Billing Timing Control</h1>
+
+    <div class="card">
+
+        <div class="grid">
+
+            <div>
+                <label>Billing Start Time</label>
+                <input type="time" id="startTime">
+            </div>
+
+            <div>
+                <label>Billing End Time</label>
+                <input type="time" id="endTime">
+            </div>
+
+            <div>
+                <label>Night Billing</label>
+
+                <select id="nightBilling">
+                    <option>Disabled</option>
+                    <option>Enabled</option>
+                </select>
+            </div>
+
+            <div>
+                <label>24/7 Billing Mode</label>
+
+                <select id="fullTime">
+                    <option>OFF</option>
+                    <option>ON</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button onclick="saveBillingTiming()">
+            Save Billing Timing
+        </button>
+
+        <div class="status" id="status"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+function saveBillingTiming(){
+
+    let start = document.getElementById("startTime").value;
+    let end = document.getElementById("endTime").value;
+
+    document.getElementById("status").innerHTML =
+    "Billing Timing Saved : " + start + " To " + end;
+
+}
+
+</script>
+
+</body>
+</html>

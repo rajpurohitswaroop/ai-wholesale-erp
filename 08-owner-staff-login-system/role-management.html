@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Role Management</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Roles</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">👥 Role Management</a>
+      <a href="staff-permissions.html">🔐 Staff Permissions</a>
+      <a href="dashboard-access-control.html">📊 Access Control</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Role Management</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Create Staff Role</h2>
+
+      <div class="form-group">
+        <label>Role Name</label>
+        <input id="roleName" placeholder="Example: Billing Staff">
+      </div>
+
+      <div class="form-group">
+        <label>Access Level</label>
+        <select id="accessLevel">
+          <option>Billing Only</option>
+          <option>Stock + Billing</option>
+          <option>Expense Entry</option>
+          <option>Full Staff Access</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="saveRole()">Save Role</button>
+      <p id="result" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveRole(){
+  const role = document.getElementById("roleName").value.trim();
+  if(!role){
+    alert("Role name enter karo");
+    return;
+  }
+  document.getElementById("result").innerText = role + " role saved successfully ✅";
+}
+</script>
+</body>
+</html>

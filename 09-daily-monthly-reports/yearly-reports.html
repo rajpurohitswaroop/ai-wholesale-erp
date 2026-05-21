@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yearly Reports</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/reports.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Yearly</div>
+    <div class="menu">
+      <a href="daily-reports.html">📅 Daily</a>
+      <a href="monthly-reports.html">🗓 Monthly</a>
+      <a class="active">📆 Yearly Reports</a>
+      <a href="analytics-dashboard.html">📊 Analytics</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Yearly Reports</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Year Revenue</h3><h2>₹1.18 Cr</h2></div>
+      <div class="card stat"><h3>Year Profit</h3><h2>₹14.5 L</h2></div>
+      <div class="card stat"><h3>Total Customers</h3><h2>420</h2></div>
+      <div class="card stat"><h3>Total Bills</h3><h2>14,880</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>Yearly Business Summary</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-top:10px;">
+        Yearly report owner ko full sales, profit, expense, pending payment aur customer growth ka overview देगा।
+      </p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/reports.js"></script>
+</body>
+</html>

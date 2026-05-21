@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Based Login Access</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Time Access</div>
+    <div class="menu">
+      <a href="secure-login-system.html">🔒 Secure Login</a>
+      <a class="active">⏰ Time Based Login</a>
+      <a href="auto-logout-timing.html">🚪 Auto Logout</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Time-based Login Access</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <div class="form-group">
+        <label>Staff Login Start Time</label>
+        <input id="startTime" type="time">
+      </div>
+
+      <div class="form-group">
+        <label>Staff Login End Time</label>
+        <input id="endTime" type="time">
+      </div>
+
+      <div class="form-group">
+        <label>After Closing Login</label>
+        <select id="afterClose">
+          <option>Blocked</option>
+          <option>Owner Approval Required</option>
+          <option>Allowed</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="saveTimeAccess()">Save Time Access</button>
+      <p id="result" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveTimeAccess(){
+  const start = document.getElementById("startTime").value;
+  const end = document.getElementById("endTime").value;
+
+  if(!start || !end){
+    alert("Start aur end time select karo");
+    return;
+  }
+
+  document.getElementById("result").innerText = "Staff login time saved: " + start + " to " + end + " ✅";
+}
+</script>
+</body>
+</html>

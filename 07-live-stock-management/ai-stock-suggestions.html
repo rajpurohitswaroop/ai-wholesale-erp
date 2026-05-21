@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Stock Suggestions</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard(); showAISuggestion('stock')">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">AI Stock</div>
+    <div class="menu">
+      <a href="live-stock-tracking.html">📦 Live Stock</a>
+      <a href="low-stock-alerts.html">⚠ Alerts</a>
+      <a class="active">🤖 AI Suggestions</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>AI Stock Suggestions</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Reorder Needed</h3><h2>12</h2></div>
+      <div class="card stat"><h3>Fast Moving</h3><h2>Sugar</h2></div>
+      <div class="card stat"><h3>Slow Moving</h3><h2>Tea</h2></div>
+      <div class="card stat"><h3>Stock Risk</h3><h2>High</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>AI Suggestion</h2>
+      <p id="aiSuggestion" style="margin-top:12px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/ai.js"></script>
+</body>
+</html>

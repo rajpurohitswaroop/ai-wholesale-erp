@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Product Rates</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Custom Rates</div>
+    <div class="menu">
+      <a href="customer-wise-pricing.html">👤 Customer Pricing</a>
+      <a class="active">📦 Custom Product Rates</a>
+      <a href="wholesale-pricing-system.html">🏪 Wholesale Pricing</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Custom Product Rates</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <h2>Product Rate List</h2>
+      <table>
+        <tr><th>Product</th><th>Normal Rate</th><th>Wholesale Rate</th><th>VIP Rate</th></tr>
+        <tr><td>Sugar</td><td>₹42</td><td>₹40</td><td>₹39</td></tr>
+        <tr><td>Oil Tin</td><td>₹1250</td><td>₹1220</td><td>₹1200</td></tr>
+        <tr><td>Rice Bag</td><td>₹1850</td><td>₹1800</td><td>₹1780</td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Bill After Confirm</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/billing.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Auto Bill</div>
+    <div class="menu">
+      <a href="final-confirmation.html">✅ Confirmation</a>
+      <a class="active">🧾 Auto Bill After Confirm</a>
+      <a href="../02-auto-billing-system/pdf-invoice.html">📄 Invoice</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Bill Generation After Confirm</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="invoice-box">
+      <div class="invoice-title">Voice AI Generated Bill</div>
+      <p style="color:var(--muted);margin:8px 0;">Generated after customer confirmation</p>
+
+      <table>
+        <tr><th>Product</th><th>Qty</th><th>Amount</th></tr>
+        <tr><td>Sugar</td><td>10</td><td>₹420</td></tr>
+        <tr><td>Oil Tin</td><td>5</td><td>₹6250</td></tr>
+      </table>
+
+      <br>
+      <h2>Total: ₹6670</h2>
+      <br>
+      <span class="stamp">CONFIRMED</span>
+    </div>
+
+    <br>
+    <button class="btn btn-primary" onclick="window.print()">Print Bill</button>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

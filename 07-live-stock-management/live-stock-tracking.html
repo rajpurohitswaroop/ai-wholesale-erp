@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Stock Tracking</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/stock.css">
+</head>
+<body onload="loadDashboard(); renderProducts()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Live Stock</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">📦 Live Stock</a>
+      <a href="low-stock-alerts.html">⚠ Low Stock</a>
+      <a href="stock-updates.html">🔄 Stock Updates</a>
+      <a href="fast-stock-search.html">🔎 Fast Search</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Live Stock Tracking</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Total Products</h3><h2>1,500</h2></div>
+      <div class="card stat"><h3>Available Stock</h3><h2>9,850</h2></div>
+      <div class="card stat"><h3>Low Stock</h3><h2>12</h2></div>
+      <div class="card stat"><h3>Out of Stock</h3><h2>4</h2></div>
+    </div>
+
+    <div class="card table-card">
+      <h2>Current Stock</h2>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Product</th><th>Stock</th><th>Rate</th><th>GST</th><th>Status</th></tr>
+        </thead>
+        <tbody id="productList">
+          <tr><td>1</td><td>Sugar</td><td>100</td><td>₹42</td><td>5%</td><td><span class="status paid">Available</span></td></tr>
+          <tr><td>2</td><td>Oil Tin</td><td>8</td><td>₹1250</td><td>5%</td><td><span class="status danger">Low</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/stock.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Order History</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar"><div class="brand">Order History</div><div class="menu"><a href="whatsapp-order-system.html">📲 Orders</a><a class="active">📜 History</a></div></aside>
+  <main class="main">
+    <div class="topbar"><h1>Customer Order History</h1><button class="btn btn-light" onclick="logout()">Logout</button></div>
+    <div class="card table-card">
+      <table>
+        <tr><th>Date</th><th>Customer</th><th>Order</th><th>Status</th></tr>
+        <tr><td>Today</td><td>Ram Kirana</td><td>10 Sugar, 5 Oil</td><td><span class="status paid">Confirmed</span></td></tr>
+        <tr><td>Yesterday</td><td>Shyam Store</td><td>Rice, Tea</td><td><span class="status pending">Pending</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

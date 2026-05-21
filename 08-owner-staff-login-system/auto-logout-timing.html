@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Logout Timing</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Auto Logout</div>
+    <div class="menu">
+      <a href="time-based-loing-access.html">⏰ Time Access</a>
+      <a class="active">🚪 Auto Logout</a>
+      <a href="employee-activity-tracking.html">📍 Activity</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Logout Timing</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <div class="form-group">
+        <label>Auto Logout Time</label>
+        <input id="logoutTime" type="time">
+      </div>
+
+      <div class="form-group">
+        <label>Warning Before Logout</label>
+        <select id="warning">
+          <option>5 Minutes Before</option>
+          <option>10 Minutes Before</option>
+          <option>15 Minutes Before</option>
+          <option>30 Minutes Before</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Force Logout</label>
+        <select id="force">
+          <option>Enabled</option>
+          <option>Disabled</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="saveLogoutTime()">Save Logout Timing</button>
+      <p id="result" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveLogoutTime(){
+  const time = document.getElementById("logoutTime").value;
+
+  if(!time){
+    alert("Logout time select karo");
+    return;
+  }
+
+  document.getElementById("result").innerText = "Auto logout time saved: " + time + " ✅";
+}
+</script>
+</body>
+</html>

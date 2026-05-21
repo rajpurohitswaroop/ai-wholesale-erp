@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Login System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/auth.css">
+</head>
+<body class="auth-body">
+
+<main class="auth-box fade-in">
+  <div class="auth-logo">AI Wholesale ERP</div>
+  <h2>Owner Login</h2>
+  <p>Owner ko full system access milega.</p>
+
+  <div class="form-group">
+    <label>Owner ID</label>
+    <input id="ownerId" placeholder="Enter owner id">
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input id="password" type="password" placeholder="Enter password">
+  </div>
+
+  <button class="btn btn-primary full-btn" onclick="ownerLogin()">Login</button>
+
+  <div class="auth-footer">
+    <a href="../dashboard/owner-dashboard.html">Go Dashboard Demo</a>
+  </div>
+</main>
+
+<script>
+function ownerLogin(){
+  const id = document.getElementById("ownerId").value.trim();
+  const pass = document.getElementById("password").value.trim();
+
+  if(!id || !pass){
+    alert("Owner ID aur password enter karo");
+    return;
+  }
+
+  localStorage.setItem("userRole", "owner");
+  window.location.href = "../dashboard/owner-dashboard.html";
+}
+</script>
+
+</body>
+</html>

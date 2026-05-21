@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Business Timing Automation</title>
+
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+
+    <style>
+        body{
+            background:#0f172a;
+            color:white;
+            font-family:Arial;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:30px;
+        }
+
+        .card{
+            background:#1e293b;
+            border-radius:15px;
+            padding:25px;
+            margin-top:25px;
+        }
+
+        .title{
+            font-size:28px;
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+
+        input,select{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            margin-top:10px;
+            background:#334155;
+            color:white;
+        }
+
+        .btn{
+            background:#22c55e;
+            color:white;
+            border:none;
+            padding:14px 20px;
+            border-radius:10px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+
+        .status{
+            margin-top:20px;
+            color:#4ade80;
+            font-size:18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">Business Timing Automation</h1>
+
+    <div class="card">
+
+        <div class="grid">
+
+            <div>
+                <label>Shop Opening Time</label>
+                <input type="time" id="openTime">
+            </div>
+
+            <div>
+                <label>Shop Closing Time</label>
+                <input type="time" id="closeTime">
+            </div>
+
+            <div>
+                <label>24/7 Mode</label>
+                <select id="mode">
+                    <option>OFF</option>
+                    <option>ON</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Auto WhatsApp Replies</label>
+                <select id="reply">
+                    <option>Enabled</option>
+                    <option>Disabled</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button class="btn" onclick="saveTiming()">
+            Save Settings
+        </button>
+
+        <div class="status" id="status"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+function saveTiming(){
+
+    let open = document.getElementById("openTime").value;
+    let close = document.getElementById("closeTime").value;
+
+    document.getElementById("status").innerHTML =
+    "Business Timing Saved : " + open + " To " + close;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low Stock Alerts</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/stock.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Stock Alerts</div>
+    <div class="menu">
+      <a href="live-stock-tracking.html">📦 Live Stock</a>
+      <a class="active">⚠ Low Stock Alerts</a>
+      <a href="ai-stock-suggestions.html">🤖 AI Suggestion</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Low Stock Alerts</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Product</th><th>Current Stock</th><th>Minimum Stock</th><th>Alert</th></tr>
+        <tr><td>Oil Tin</td><td>8</td><td>20</td><td><span class="status danger">Reorder Now</span></td></tr>
+        <tr><td>Tea Box</td><td>5</td><td>15</td><td><span class="status danger">Low Stock</span></td></tr>
+        <tr><td>Rice Bag</td><td>12</td><td>25</td><td><span class="status pending">Warning</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

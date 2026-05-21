@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Rate Updates</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Bulk Rates</div>
+    <div class="menu">
+      <a href="customer-wise-pricing.html">👤 Pricing</a>
+      <a class="active">📥 Bulk Rate Updates</a>
+      <a href="rate-settings-panel.html">⚙ Settings</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Bulk Rate Updates</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Update Rates by Percentage</h2>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select id="category">
+          <option>All Products</option>
+          <option>Grocery</option>
+          <option>Oil</option>
+          <option>Rice</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Increase / Decrease %</label>
+        <input id="percent" type="number" placeholder="Example: 5 or -2">
+      </div>
+
+      <button class="btn btn-primary" onclick="bulkRateUpdate()">Apply Bulk Update</button>
+      <p id="msg" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function bulkRateUpdate(){
+  const category = document.getElementById("category").value;
+  const percent = document.getElementById("percent").value;
+
+  if(percent === ""){
+    alert("Percentage enter karo");
+    return;
+  }
+
+  document.getElementById("msg").innerText =
+    `${category} me ${percent}% bulk rate update applied ✅`;
+}
+</script>
+</body>
+</html>

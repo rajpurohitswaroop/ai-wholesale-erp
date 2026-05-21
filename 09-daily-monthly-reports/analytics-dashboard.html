@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard Reports</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/reports.css">
+</head>
+<body onload="loadDashboard(); loadChartDemo()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Analytics</div>
+    <div class="menu">
+      <a href="daily-reports.html">📅 Daily</a>
+      <a class="active">📊 Analytics</a>
+      <a href="sales-reports.html">📈 Sales</a>
+      <a href="profit-reports.html">💰 Profit</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Analytics Dashboard</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Top Customer</h3><h2>Ram Kirana</h2></div>
+      <div class="card stat"><h3>Fast Product</h3><h2>Oil Tin</h2></div>
+      <div class="card stat"><h3>Sales Growth</h3><h2>18%</h2></div>
+      <div class="card stat"><h3>Payment Risk</h3><h2>Medium</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>Report Chart</h2>
+      <div id="chartBox" class="chart-box">Loading chart...</div>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/charts.js"></script>
+</body>
+</html>

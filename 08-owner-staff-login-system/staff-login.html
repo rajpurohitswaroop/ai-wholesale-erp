@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Login System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/auth.css">
+</head>
+<body class="auth-body">
+
+<main class="auth-box fade-in">
+  <div class="auth-logo">Staff Panel</div>
+  <h2>Staff Login</h2>
+  <p>Staff ko owner permission ke हिसाब से access मिलेगा.</p>
+
+  <div class="form-group">
+    <label>Staff ID</label>
+    <input id="staffId" placeholder="Enter staff id">
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input id="password" type="password" placeholder="Enter password">
+  </div>
+
+  <button class="btn btn-primary full-btn" onclick="staffLogin()">Login</button>
+</main>
+
+<script>
+function staffLogin(){
+  const id = document.getElementById("staffId").value.trim();
+  const pass = document.getElementById("password").value.trim();
+
+  if(!id || !pass){
+    alert("Staff ID aur password enter karo");
+    return;
+  }
+
+  localStorage.setItem("userRole", "staff");
+  window.location.href = "../dashboard/staff-dashboard.html";
+}
+</script>
+
+</body>
+</html>

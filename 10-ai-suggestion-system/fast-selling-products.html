@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Selling Products</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Fast Selling</div>
+    <div class="menu">
+      <a href="product-suggestions.html">📦 Product Suggestions</a>
+      <a class="active">🔥 Fast Selling Products</a>
+      <a href="sales-trend-analysis.html">📈 Sales Trend</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Fast Selling Product Analysis</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Rank</th><th>Product</th><th>Sold This Month</th><th>AI Action</th></tr>
+        <tr><td>1</td><td>Oil Tin</td><td>420</td><td><span class="status paid">Increase Stock</span></td></tr>
+        <tr><td>2</td><td>Sugar</td><td>380</td><td><span class="status paid">Reorder</span></td></tr>
+        <tr><td>3</td><td>Rice Bag</td><td>260</td><td><span class="status pending">Watch</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

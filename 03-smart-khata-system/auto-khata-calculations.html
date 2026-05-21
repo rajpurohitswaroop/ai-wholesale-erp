@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Khata Calculations</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Calculation</div>
+    <div class="menu">
+      <a href="customer-khata.html">📒 Khata</a>
+      <a class="active">🧮 Auto Calculation</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Khata Calculations</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Khata Calculator</h2>
+
+      <div class="form-group">
+        <label>Total Bill</label>
+        <input id="bill" type="number" placeholder="Example: 20000">
+      </div>
+
+      <div class="form-group">
+        <label>Payment Received</label>
+        <input id="paid" type="number" placeholder="Example: 7500">
+      </div>
+
+      <button class="btn btn-primary" onclick="calculateKhata()">Calculate Remaining</button>
+      <h2 id="remaining" style="margin-top:18px;color:var(--primary-dark);"></h2>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function calculateKhata(){
+  const bill = Number(document.getElementById("bill").value);
+  const paid = Number(document.getElementById("paid").value);
+  const remaining = bill - paid;
+
+  if(bill <= 0 || paid < 0){
+    alert("Amount sahi bharein");
+    return;
+  }
+
+  document.getElementById("remaining").innerText = "Remaining Khata: ₹" + remaining;
+}
+</script>
+</body>
+</html>

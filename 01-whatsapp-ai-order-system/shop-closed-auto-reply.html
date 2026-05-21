@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop Closed Auto Reply</title>
+
+<style>
+
+body{
+    background:#020617;
+    color:white;
+    font-family:Arial;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    padding:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    margin-top:30px;
+}
+
+textarea{
+    width:100%;
+    height:180px;
+    border:none;
+    border-radius:10px;
+    padding:15px;
+    font-size:16px;
+    background:#334155;
+    color:white;
+}
+
+button{
+    margin-top:20px;
+    padding:14px 25px;
+    border:none;
+    border-radius:10px;
+    background:#0ea5e9;
+    color:white;
+    cursor:pointer;
+}
+
+.success{
+    margin-top:20px;
+    color:#4ade80;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Shop Closed Auto Reply</h1>
+
+    <div class="card">
+
+        <h3>Closed Time Message</h3>
+
+        <textarea id="replyBox">
+Sorry, Shop Is Currently Closed.
+Business Hours: 8:00 AM To 8:00 PM
+Please Contact Tomorrow.
+        </textarea>
+
+        <button onclick="saveReply()">
+            Save Auto Reply
+        </button>
+
+        <div class="success" id="success"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+function saveReply(){
+
+    document.getElementById("success").innerHTML =
+    "Auto Reply Saved Successfully";
+
+}
+
+</script>
+
+</body>
+</html>

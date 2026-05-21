@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock History</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Stock History</div>
+    <div class="menu">
+      <a href="live-stock-tracking.html">📦 Live Stock</a>
+      <a class="active">📜 Stock History</a>
+      <a href="stock-updates.html">🔄 Updates</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Stock History</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Date</th><th>Product</th><th>Action</th><th>Qty</th><th>By</th></tr>
+        <tr><td>Today</td><td>Sugar</td><td>Added</td><td>100</td><td>Owner</td></tr>
+        <tr><td>Today</td><td>Oil Tin</td><td>Sold</td><td>5</td><td>Staff</td></tr>
+        <tr><td>Yesterday</td><td>Rice Bag</td><td>Added</td><td>50</td><td>Owner</td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

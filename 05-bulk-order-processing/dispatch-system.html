@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispatch System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Dispatch</div>
+    <div class="menu">
+      <a href="bulk-orders.html">📦 Bulk Orders</a>
+      <a class="active">🚚 Dispatch</a>
+      <a href="order-queue-system.html">📋 Queue</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Dispatch System</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <h2>Dispatch Orders</h2>
+      <table>
+        <tr><th>Order</th><th>Customer</th><th>Vehicle</th><th>Status</th></tr>
+        <tr><td>#1001</td><td>Ram Kirana</td><td>RJ14 AB 2211</td><td><span class="status paid">Dispatched</span></td></tr>
+        <tr><td>#1002</td><td>Shyam Store</td><td>Loading</td><td><span class="status pending">Pending</span></td></tr>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <h2>Dispatch Update</h2>
+      <div class="form-group">
+        <label>Order Number</label>
+        <input placeholder="Example: #1002">
+      </div>
+
+      <div class="form-group">
+        <label>Dispatch Status</label>
+        <select>
+          <option>Pending</option>
+          <option>Loading</option>
+          <option>Dispatched</option>
+          <option>Delivered</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="alert('Dispatch updated ✅')">Update Dispatch</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

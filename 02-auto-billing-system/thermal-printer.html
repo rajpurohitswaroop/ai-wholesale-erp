@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermal Printer</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Thermal Print</div>
+    <div class="menu">
+      <a href="print-bill.html">🖨 Print Bill</a>
+      <a class="active">🧾 Thermal Printer</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Thermal Printer Support</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Thermal Receipt Preview</h2>
+      <div style="max-width:320px;background:white;border:1px dashed #111;padding:18px;margin-top:15px;font-family:monospace;">
+        <h3>RAJ WHOLESALE</h3>
+        <p>--------------------------</p>
+        <p>Sugar 10 x 42 = 420</p>
+        <p>Oil 5 x 1250 = 6250</p>
+        <p>--------------------------</p>
+        <h3>Total: 6670</h3>
+        <p>CASH RECEIVED</p>
+      </div>
+      <br>
+      <button class="btn btn-primary" onclick="window.print()">Print Thermal Bill</button>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

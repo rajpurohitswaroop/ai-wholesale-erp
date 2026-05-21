@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Preview System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/billing.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Order Preview</div>
+    <div class="menu">
+      <a href="whatsapp-voice-orders.html">🎙 Voice Orders</a>
+      <a class="active">👁 Order Preview</a>
+      <a href="confirm-edit-option.html">✏ Confirm / Edit</a>
+      <a href="final-confirmation.html">✅ Final Confirm</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Order Preview System</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <h2>Customer Confirmation Preview</h2>
+      <table>
+        <tr><th>Product</th><th>Qty</th><th>Rate</th><th>Total</th></tr>
+        <tr><td>Sugar</td><td>10</td><td>₹42</td><td>₹420</td></tr>
+        <tr><td>Oil Tin</td><td>5</td><td>₹1250</td><td>₹6250</td></tr>
+      </table>
+
+      <br>
+      <h2>Total: ₹6670</h2>
+      <p style="color:var(--muted);margin-top:8px;">Customer को WhatsApp पर यह preview भेजा जाएगा।</p>
+
+      <br>
+      <button class="btn btn-primary" onclick="alert('Preview sent to customer ✅')">Send Preview</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

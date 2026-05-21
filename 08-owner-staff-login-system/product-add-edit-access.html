@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Add Edit Access</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Add/Edit Access</div>
+    <div class="menu">
+      <a href="product-management-permissions.html">📦 Product Permission</a>
+      <a class="active">✏ Product Add/Edit</a>
+      <a href="stock-update-permissions.html">📊 Stock Permission</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Product Add/Edit Access Control</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Owner Control</h2>
+
+      <div class="form-group">
+        <label>Staff Product Add Access</label>
+        <select>
+          <option>Blocked</option>
+          <option>Allowed</option>
+          <option>Approval Required</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Staff Product Edit Access</label>
+        <select>
+          <option>Blocked</option>
+          <option>Allowed</option>
+          <option>Approval Required</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="alert('Product access settings saved ✅')">Save Access</button>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

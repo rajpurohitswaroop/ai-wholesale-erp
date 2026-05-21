@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Stock Search</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Stock Search</div>
+    <div class="menu">
+      <a href="live-stock-tracking.html">📦 Live Stock</a>
+      <a class="active">🔎 Fast Search</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Fast Stock Search</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Search Product Stock</h2>
+
+      <input id="searchInput" placeholder="Search product name..." onkeyup="searchStock()">
+
+      <div id="searchResult" style="margin-top:18px;font-weight:800;color:var(--primary-dark);">
+        Type product name to search.
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function searchStock(){
+  const value = document.getElementById("searchInput").value.toLowerCase();
+  const result = document.getElementById("searchResult");
+
+  if(value.includes("sugar")){
+    result.innerText = "Sugar Stock: 100 Bags | Rate: ₹42 ✅";
+  } else if(value.includes("oil")){
+    result.innerText = "Oil Tin Stock: 8 Tin | Low Stock ⚠";
+  } else if(value.includes("rice")){
+    result.innerText = "Rice Stock: 50 Bags ✅";
+  } else if(value.length > 0){
+    result.innerText = "Product not found";
+  } else {
+    result.innerText = "Type product name to search.";
+  }
+}
+</script>
+</body>
+</html>

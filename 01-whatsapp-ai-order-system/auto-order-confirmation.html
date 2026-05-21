@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Order Confirmation</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar"><div class="brand">Confirmation</div><div class="menu"><a href="whatsapp-order-system.html">📲 Orders</a><a class="active">✅ Confirmation</a></div></aside>
+  <main class="main">
+    <div class="topbar"><h1>Auto Order Confirmation</h1><button class="btn btn-light" onclick="logout()">Logout</button></div>
+    <div class="card">
+      <h2>Order Preview</h2>
+      <table>
+        <tr><th>Product</th><th>Qty</th><th>Rate</th><th>Total</th></tr>
+        <tr><td>Sugar</td><td>10</td><td>₹42</td><td>₹420</td></tr>
+        <tr><td>Oil Tin</td><td>5</td><td>₹1250</td><td>₹6250</td></tr>
+      </table>
+      <br>
+      <button class="btn btn-primary" onclick="alert('Order confirmed ✅ Bill generation next step')">CONFIRM ORDER</button>
+      <button class="btn btn-light" onclick="alert('Customer can edit order')">EDIT ORDER</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

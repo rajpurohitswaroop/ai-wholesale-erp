@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Checkout Flow</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/billing.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Checkout</div>
+    <div class="menu">
+      <a href="fast-order-processing.html">⚡ Processing</a>
+      <a class="active">✅ Fast Checkout</a>
+      <a href="../14-cash-billing-system/quick-billing.html">💵 Quick Billing</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Fast Checkout Flow</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Checkout Summary</h2>
+
+      <table>
+        <tr><th>Customer</th><th>Total Items</th><th>Amount</th><th>Payment</th></tr>
+        <tr><td>Ram Kirana</td><td>15</td><td>₹6670</td><td><span class="status pending">Pending</span></td></tr>
+      </table>
+
+      <br>
+
+      <div class="payment-options">
+        <div class="payment-option" onclick="selectPayment('cash')">Cash</div>
+        <div class="payment-option" onclick="selectPayment('upi')">UPI</div>
+        <div class="payment-option" onclick="selectPayment('pending')">Pending</div>
+      </div>
+
+      <p id="paymentStatus" style="margin-top:18px;font-weight:900;color:var(--primary-dark);">
+        STATUS: NOT SELECTED
+      </p>
+
+      <button class="btn btn-primary" onclick="alert('Checkout completed ✅')">Complete Checkout</button>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/payment.js"></script>
+</body>
+</html>

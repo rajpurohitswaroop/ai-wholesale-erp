@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Voice Orders</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Voice AI Billing</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">🎙 WhatsApp Voice Orders</a>
+      <a href="speech-to-text-ai.html">📝 Speech to Text</a>
+      <a href="order-preview-system.html">👁 Order Preview</a>
+      <a href="final-confirmation.html">✅ Final Confirmation</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>WhatsApp Voice Orders</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Voice Order Demo</h2>
+      <p style="color:var(--muted);margin:10px 0;">
+        Customer WhatsApp voice भेजेगा, AI उसको text में convert करेगी।
+      </p>
+
+      <button class="btn btn-primary" onclick="startVoiceOrder()">Start Voice Demo</button>
+      <button class="btn btn-light" onclick="previewVoiceOrder('10 कट्टे sugar, 5 oil tin')">Generate Preview</button>
+
+      <h2 id="voicePreview" style="margin-top:20px;color:var(--primary-dark);"></h2>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/voice.js"></script>
+</body>
+</html>

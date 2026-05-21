@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Wise Khata</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Party Khata</div>
+    <div class="menu">
+      <a href="customer-khata.html">📒 Customer Khata</a>
+      <a class="active">👥 Party Wise Khata</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Party Wise Khata</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Party</th><th>Total Purchase</th><th>Pending</th><th>Status</th></tr>
+        <tr><td>Ram Kirana</td><td>₹1,20,000</td><td>₹12,500</td><td><span class="status pending">Pending</span></td></tr>
+        <tr><td>Shyam Store</td><td>₹80,000</td><td>₹8,400</td><td><span class="status danger">Overdue</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

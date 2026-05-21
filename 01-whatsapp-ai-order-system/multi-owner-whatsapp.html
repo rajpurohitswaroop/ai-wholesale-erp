@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Owner WhatsApp</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar"><div class="brand">Multi Owner</div><div class="menu"><a href="whatsapp-order-system.html">📲 Orders</a><a class="active">🏪 Multi Owner</a></div></aside>
+  <main class="main">
+    <div class="topbar"><h1>Multi Owner WhatsApp Support</h1><button class="btn btn-light" onclick="logout()">Logout</button></div>
+    <div class="card table-card">
+      <table>
+        <tr><th>Business</th><th>Number</th><th>Status</th></tr>
+        <tr><td>Raj Provision</td><td>+91XXXXXX001</td><td><span class="status paid">Connected</span></td></tr>
+        <tr><td>Shree Traders</td><td>+91XXXXXX002</td><td><span class="status pending">Pending</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

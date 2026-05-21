@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Auto Billing OFF After Closing</title>
+
+<style>
+
+body{
+    background:#020617;
+    color:white;
+    font-family:Arial;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:30px;
+    margin-top:30px;
+}
+
+h1{
+    color:#38bdf8;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+select,input{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+}
+
+button{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:14px 22px;
+    border-radius:10px;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+.success{
+    margin-top:20px;
+    color:#4ade80;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Auto Billing OFF After Closing</h1>
+
+    <div class="card">
+
+        <div class="row">
+
+            <div>
+
+                <label>Shop Closing Time</label>
+
+                <input type="time" id="closingTime">
+
+            </div>
+
+            <div>
+
+                <label>Auto Billing OFF</label>
+
+                <select id="billingStatus">
+                    <option>Enabled</option>
+                    <option>Disabled</option>
+                </select>
+
+            </div>
+
+            <div>
+
+                <label>Warning Before Closing</label>
+
+                <select id="warning">
+                    <option>15 Minutes Before</option>
+                    <option>30 Minutes Before</option>
+                    <option>1 Hour Before</option>
+                </select>
+
+            </div>
+
+            <div>
+
+                <label>Emergency Billing Access</label>
+
+                <select id="emergency">
+                    <option>Allowed</option>
+                    <option>Blocked</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <button onclick="saveAutoOff()">
+            Save Auto OFF Settings
+        </button>
+
+        <div class="success" id="message"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+function saveAutoOff(){
+
+    let closing =
+    document.getElementById("closingTime").value;
+
+    document.getElementById("message").innerHTML =
+    "Auto Billing OFF Saved For : " + closing;
+
+}
+
+</script>
+
+</body>
+</html>

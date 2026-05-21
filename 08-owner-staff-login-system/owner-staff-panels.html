@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Staff Panels</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Panels</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Owner Dashboard</a>
+      <a href="../dashboard/staff-dashboard.html">👨‍💼 Staff Dashboard</a>
+      <a class="active">🧩 Separate Panels</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Separate Owner / Staff Panels</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat">
+        <h3>Owner Panel</h3>
+        <h2>Full Access</h2>
+      </div>
+
+      <div class="card stat">
+        <h3>Staff Panel</h3>
+        <h2>Limited</h2>
+      </div>
+
+      <div class="card stat">
+        <h3>Permissions</h3>
+        <h2>Role Based</h2>
+      </div>
+
+      <div class="card stat">
+        <h3>Security</h3>
+        <h2>Active</h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Panel Logic</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-top:10px;">
+        Owner ko full ERP control milega. Staff ko sirf owner ke permission ke हिसाब से billing, stock, expenses aur orders ka access milega.
+      </p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

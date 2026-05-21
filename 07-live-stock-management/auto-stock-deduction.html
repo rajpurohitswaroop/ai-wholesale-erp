@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Stock Deduction</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Auto Deduct</div>
+    <div class="menu">
+      <a href="live-stock-tracking.html">📦 Live Stock</a>
+      <a href="product-quantity-management.html">🔢 Quantity</a>
+      <a class="active">➖ Auto Deduction</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Stock Deduction</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Auto Deduction Rule</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-top:10px;">
+        Jab bill confirm hoga, product quantity automatically stock se minus ho jayegi.
+      </p>
+
+      <br>
+      <span class="status paid">Auto Deduction Active</span>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

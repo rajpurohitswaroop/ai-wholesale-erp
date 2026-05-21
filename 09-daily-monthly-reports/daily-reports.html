@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Reports</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/reports.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Reports</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">📅 Daily Reports</a>
+      <a href="monthly-reports.html">🗓 Monthly Reports</a>
+      <a href="yearly-reports.html">📆 Yearly Reports</a>
+      <a href="sales-reports.html">📈 Sales Reports</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Daily Reports</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Today Sales</h3><h2>₹1,20,500</h2></div>
+      <div class="card stat"><h3>Today Bills</h3><h2>58</h2></div>
+      <div class="card stat"><h3>Cash</h3><h2>₹35,000</h2></div>
+      <div class="card stat"><h3>Pending</h3><h2>₹18,400</h2></div>
+    </div>
+
+    <div class="card table-card">
+      <h2>Today Summary</h2>
+      <table>
+        <tr><th>Time</th><th>Customer</th><th>Amount</th><th>Status</th></tr>
+        <tr><td>10:15 AM</td><td>Ram Kirana</td><td>₹12,500</td><td><span class="status paid">Paid</span></td></tr>
+        <tr><td>11:30 AM</td><td>Shyam Store</td><td>₹8,400</td><td><span class="status pending">Pending</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/reports.js"></script>
+</body>
+</html>

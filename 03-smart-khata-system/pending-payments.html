@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pending Payments</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Pending</div>
+    <div class="menu">
+      <a href="customer-khata.html">📒 Customer Khata</a>
+      <a class="active">⏳ Pending Payments</a>
+      <a href="payment-history.html">💳 Payment History</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Pending Payments</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Customer</th><th>Amount</th><th>Due Date</th><th>Status</th></tr>
+        <tr><td>Ram Kirana</td><td>₹12,500</td><td>2026-05-20</td><td><span class="status pending">Pending</span></td></tr>
+        <tr><td>Shyam Store</td><td>₹8,400</td><td>2026-05-18</td><td><span class="status danger">Overdue</span></td></tr>
+        <tr><td>Mahadev Mart</td><td>₹18,900</td><td>2026-05-25</td><td><span class="status pending">Pending</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>
