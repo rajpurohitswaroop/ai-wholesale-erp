@@ -1,0 +1,8 @@
+SETUP GUIDE
+
+1. Install Python 3.11
+2. Install required packages
+3. Configure .env file
+4. Run backend server
+5. Open frontend
+6. Test APIs

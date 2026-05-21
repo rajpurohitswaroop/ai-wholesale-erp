@@ -1,0 +1,15 @@
+DEPLOYMENT STEPS
+
+1. Install Python
+2. Install VS Code
+3. Open project folder
+4. Run:
+   pip install -r requirements.txt
+
+5. Start backend:
+   python app.py
+
+6. Open frontend in browser
+
+Server:
+127.0.0.1:5000

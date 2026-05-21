@@ -1,0 +1,15 @@
+AI WHOLESALE ERP FEATURES
+
+- AI Billing
+- Voice Orders
+- WhatsApp Orders
+- QR Payments
+- Stock Management
+- Expense Management
+- Multi Language
+- Customer Analysis
+- Reports Engine
+- Thermal Printing
+- Invoice PDF
+- Staff Login
+- Owner Dashboard

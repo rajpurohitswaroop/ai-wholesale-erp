@@ -1,0 +1,15 @@
+DATABASE GUIDE
+
+Main Database: SQLite
+
+Tables:
+- products
+- bills
+- customers
+- stock
+- expenses
+- payments
+- users
+
+Database File:
+wholesale.db

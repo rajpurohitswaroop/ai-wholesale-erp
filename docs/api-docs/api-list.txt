@@ -1,0 +1,15 @@
+AI Wholesale ERP API LIST
+
+/auth/login
+/auth/staff-login
+/products/add
+/products/list
+/products/edit
+/billing/create
+/billing/history
+/stock/update
+/reports/daily
+/reports/monthly
+/whatsapp/order
+/payment/upi
+/payment/qr
