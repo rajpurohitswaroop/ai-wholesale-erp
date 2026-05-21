@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Overview | AI Wholesale ERP</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Overview</div>
+    <div class="menu">
+      <a href="owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">📌 Business Overview</a>
+      <a href="analytics-dashboard.html">📊 Analytics</a>
+      <a href="../products/product-list.html">📦 Products</a>
+      <a href="../09-daily-monthly-reports/daily-reports.html">📄 Reports</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1>Business Overview</h1>
+        <p style="color:var(--muted);margin-top:4px;">Complete wholesale business summary</p>
+      </div>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Total Customers</h3><h2>240</h2></div>
+      <div class="card stat"><h3>Total Products</h3><h2>1,500</h2></div>
+      <div class="card stat"><h3>Monthly Revenue</h3><h2>₹9,80,000</h2></div>
+      <div class="card stat"><h3>Pending Bills</h3><h2>37</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>System Modules</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-top:10px;">
+        WhatsApp AI Orders, Auto Billing, Smart Khata, Stock Management, Reports,
+        Staff Permissions, Payment Reminder, Credit Limit, Expense Management aur Multi-Language system ready structure me available hain.
+      </p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

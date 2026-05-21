@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Import | AI Wholesale ERP</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">CSV Import</div>
+    <div class="menu">
+      <a href="bulk-upload.html">📥 Bulk Upload</a>
+      <a class="active">📄 CSV Import</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>CSV Product Import</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>CSV Upload</h2>
+      <p style="color:var(--muted);margin:10px 0;">CSV format: product, rate, gst, stock</p>
+      <input type="file" accept=".csv">
+      <br><br>
+      <button class="btn btn-primary" onclick="alert('CSV import backend se connect hoga ✅')">Import CSV</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

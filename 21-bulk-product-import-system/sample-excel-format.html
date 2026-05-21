@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Excel Format</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Sample Format</div>
+    <div class="menu">
+      <a href="excel-import.html">📊 Excel Import</a>
+      <a class="active">📋 Sample Excel</a>
+      <a href="bulk-product-upload.html">📦 Upload</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Sample Excel Format</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>product_name</th><th>category</th><th>sku</th><th>rate</th><th>gst</th><th>stock</th><th>unit</th></tr>
+        <tr><td>Sugar 50kg</td><td>Grocery</td><td>SGR-50</td><td>42</td><td>5</td><td>100</td><td>Bag</td></tr>
+        <tr><td>Oil Tin</td><td>Oil</td><td>OIL-15</td><td>1250</td><td>5</td><td>50</td><td>Tin</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <button class="btn btn-primary" onclick="alert('Sample format downloaded ✅')">Download Sample Excel</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Permissions | AI Wholesale ERP</title>
+
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="brand">Owner Panel</div>
+
+      <div class="menu">
+        <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+        <a class="active">👨‍💼 Staff Permissions</a>
+        <a>📦 Product Access</a>
+        <a>📊 Reports</a>
+        <a>⚙ Settings</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>Staff Permissions</h1>
+          <p style="color: var(--muted); margin-top: 4px;">
+            Owner yaha se staff access control karega.
+          </p>
+        </div>
+
+        <button class="btn btn-light" onclick="window.location.href='owner-login.html'">
+          Logout
+        </button>
+      </div>
+
+      <div class="card">
+        <h2>Staff Access Control</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Billing Access</td>
+              <td><span class="status paid">Allowed</span></td>
+            </tr>
+
+            <tr>
+              <td>Stock Update Permission</td>
+              <td><span class="status paid">Allowed</span></td>
+            </tr>
+
+            <tr>
+              <td>Product Add/Edit Access</td>
+              <td><span class="status pending">Owner Controlled</span></td>
+            </tr>
+
+            <tr>
+              <td>Owner Settings Access</td>
+              <td><span class="status danger">Blocked</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

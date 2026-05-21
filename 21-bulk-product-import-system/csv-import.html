@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Import</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">CSV Import</div>
+    <div class="menu">
+      <a href="bulk-product-upload.html">📦 Bulk Upload</a>
+      <a href="excel-import.html">📊 Excel Import</a>
+      <a class="active">📄 CSV Import</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>CSV Import</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Import Products From CSV</h2>
+      <input type="file" accept=".csv">
+      <br><br>
+      <button class="btn btn-primary" onclick="alert('CSV import started ✅')">Start CSV Import</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

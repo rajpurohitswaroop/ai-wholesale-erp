@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindi Support</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">हिंदी सपोर्ट</div>
+    <div class="menu">
+      <a href="multi-language-dashboard.html">🌐 Dashboard</a>
+      <a class="active">🇮🇳 Hindi Support</a>
+      <a href="english-support.html">English</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>हिंदी भाषा सपोर्ट</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>ERP हिंदी में</h2>
+      <p style="color:var(--muted);line-height:1.8;">
+        Dashboard, billing, khata, WhatsApp AI और voice AI को हिंदी भाषा में दिखाने के लिए यह module रहेगा।
+      </p>
+      <br>
+      <button class="btn btn-primary" onclick="alert('Hindi support enabled ✅')">Enable Hindi</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

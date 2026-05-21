@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Login | AI Wholesale ERP</title>
+
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/auth.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body class="auth-body">
+
+  <main class="auth-box fade-in">
+    <div class="auth-logo">AI Wholesale ERP</div>
+
+    <h2>Owner Login</h2>
+    <p>Owner dashboard access ke liye login karein.</p>
+
+    <div class="form-group">
+      <label>Owner Username</label>
+      <input id="username" type="text" placeholder="Enter owner username">
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input id="password" type="password" placeholder="Enter password">
+    </div>
+
+    <button class="btn btn-primary full-btn" onclick="loginUser('owner')">
+      Login as Owner
+    </button>
+
+    <div class="auth-footer">
+      <a href="forgot-password.html">Forgot Password?</a> |
+      <a href="staff-login.html">Staff Login</a>
+    </div>
+  </main>
+
+  <script>
+    function loginUser(role) {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!username || !password) {
+        alert("Username aur password enter karo");
+        return;
+      }
+
+      localStorage.setItem("userRole", role);
+      window.location.href = "../dashboard/owner-dashboard.html";
+    }
+  </script>
+
+</body>
+</html>

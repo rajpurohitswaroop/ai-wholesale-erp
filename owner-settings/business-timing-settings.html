@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Business Timing Settings</title>
+
+<link rel="stylesheet" href="../../assets/css/global.css">
+
+<style>
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+h1{
+    color:#38bdf8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+input,select{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+    margin-top:10px;
+}
+
+button{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:14px 20px;
+    border-radius:10px;
+    margin-top:20px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.status{
+    margin-top:20px;
+    color:#4ade80;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Business Timing Settings</h1>
+
+    <div class="card">
+
+        <div class="grid">
+
+            <div>
+                <label>Shop Opening Time</label>
+                <input type="time" id="openTime">
+            </div>
+
+            <div>
+                <label>Shop Closing Time</label>
+                <input type="time" id="closeTime">
+            </div>
+
+            <div>
+                <label>Billing System</label>
+
+                <select id="billing">
+                    <option>Automatic</option>
+                    <option>Manual</option>
+                </select>
+            </div>
+
+            <div>
+                <label>WhatsApp Auto Reply</label>
+
+                <select id="reply">
+                    <option>Enabled</option>
+                    <option>Disabled</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Staff Login Access</label>
+
+                <select id="staff">
+                    <option>Allowed</option>
+                    <option>Blocked After Closing</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Sunday Mode</label>
+
+                <select id="sunday">
+                    <option>Shop Open</option>
+                    <option>Shop Closed</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button onclick="saveSettings()">
+            Save Business Settings
+        </button>
+
+        <div class="status" id="status"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+function saveSettings(){
+
+    let open =
+    document.getElementById("openTime").value;
+
+    let close =
+    document.getElementById("closeTime").value;
+
+    document.getElementById("status").innerHTML =
+    "Business Timing Saved : " + open + " To " + close;
+
+}
+
+</script>
+
+</body>
+</html>

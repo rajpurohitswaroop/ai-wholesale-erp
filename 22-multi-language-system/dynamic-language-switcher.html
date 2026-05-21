@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Language Switcher</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Switcher</div>
+    <div class="menu">
+      <a href="multi-language-dashboard.html">🌐 Dashboard</a>
+      <a class="active">🔄 Dynamic Switcher</a>
+      <a href="regional-language-billing.html">🧾 Regional Billing</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Dynamic Language Switcher</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Select ERP Language</h2>
+
+      <div class="form-group">
+        <label>Language</label>
+        <select id="lang">
+          <option>Hindi</option>
+          <option>English</option>
+          <option>Gujarati</option>
+          <option>Marathi</option>
+          <option>Tamil</option>
+          <option>Telugu</option>
+          <option>Kannada</option>
+          <option>Bengali</option>
+          <option>Punjabi</option>
+          <option>Malayalam</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="saveLang()">Apply Language</button>
+      <p id="msg" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveLang(){
+  const lang = document.getElementById("lang").value;
+  localStorage.setItem("erpLanguage", lang);
+  document.getElementById("msg").innerText = lang + " language applied successfully ✅";
+}
+</script>
+</body>
+</html>
