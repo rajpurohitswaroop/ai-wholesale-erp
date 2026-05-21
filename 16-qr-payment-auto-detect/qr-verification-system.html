@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Verification System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">QR Verify</div>
+    <div class="menu">
+      <a href="qr-scanner.html">🔳 QR Scanner</a>
+      <a href="auto-payment-detect.html">🤖 Auto Detect</a>
+      <a class="active">🛡 QR Verification</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>QR Verification System</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Verify Payment Transaction</h2>
+
+      <div class="form-group">
+        <label>Transaction ID</label>
+        <input id="txn" placeholder="Enter UPI transaction ID">
+      </div>
+
+      <div class="form-group">
+        <label>Expected Amount</label>
+        <input id="amount" type="number" placeholder="Example: 6670">
+      </div>
+
+      <button class="btn btn-primary" onclick="verifyQR()">Verify Payment</button>
+      <h2 id="result" style="margin-top:18px;color:var(--primary-dark);"></h2>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function verifyQR(){
+  const txn = document.getElementById("txn").value.trim();
+  const amount = document.getElementById("amount").value;
+
+  if(!txn || !amount){
+    alert("Transaction ID aur amount fill karo");
+    return;
+  }
+
+  document.getElementById("result").innerText = "QR payment verified successfully ✅";
+}
+</script>
+</body>
+</html>

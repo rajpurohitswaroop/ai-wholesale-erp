@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Analytics</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/reports.css">
+</head>
+<body onload="loadDashboard(); loadChartDemo()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Analytics</div>
+    <div class="menu">
+      <a href="monthly-expense-reports.html">🗓 Monthly Reports</a>
+      <a class="active">📈 Expense Analytics</a>
+      <a href="owner-live-expense-view.html">👁 Owner View</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Expense Analytics</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Highest Expense</h3><h2>Transport</h2></div>
+      <div class="card stat"><h3>Avg Daily</h3><h2>₹1,600</h2></div>
+      <div class="card stat"><h3>This Month</h3><h2>₹48,000</h2></div>
+      <div class="card stat"><h3>Saving Chance</h3><h2>12%</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>Expense Chart</h2>
+      <div id="chartBox" class="chart-box">Loading chart...</div>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script src="../../assets/js/charts.js"></script>
+</body>
+</html>

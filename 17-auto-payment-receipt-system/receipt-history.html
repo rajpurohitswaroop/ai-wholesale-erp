@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt History</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Receipt History</div>
+    <div class="menu">
+      <a href="auto-receipt-generation.html">🧾 Auto Receipt</a>
+      <a href="whatsapp-receipts.html">📲 WhatsApp</a>
+      <a class="active">📜 Receipt History</a>
+      <a href="pdf-receipt-download.html">📄 PDF Receipt</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Receipt History</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Receipt No</th><th>Customer</th><th>Amount</th><th>Mode</th><th>Status</th></tr>
+        <tr><td>RCP-1001</td><td>Ram Kirana</td><td>₹6,670</td><td>UPI</td><td><span class="status paid">Sent</span></td></tr>
+        <tr><td>RCP-1002</td><td>Shyam Store</td><td>₹8,400</td><td>Cash</td><td><span class="status paid">Generated</span></td></tr>
+        <tr><td>RCP-1003</td><td>Mahadev Mart</td><td>₹12,500</td><td>QR</td><td><span class="status pending">Pending Send</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

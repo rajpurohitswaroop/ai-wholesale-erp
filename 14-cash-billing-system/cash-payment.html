@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Payment</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Cash Payment</div>
+    <div class="menu">
+      <a href="quick-billing.html">⚡ Quick Billing</a>
+      <a class="active">💵 Cash Payment</a>
+      <a href="cash-received-status.html">✅ Cash Status</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Cash Payment</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <div class="form-group"><label>Customer Name</label><input id="customer" placeholder="Ram Kirana"></div>
+      <div class="form-group"><label>Bill Amount</label><input id="amount" type="number" placeholder="12500"></div>
+      <div class="form-group"><label>Cash Received</label><input id="cash" type="number" placeholder="12500"></div>
+      <button class="btn btn-primary" onclick="saveCash()">Save Cash Payment</button>
+      <h2 id="result" style="margin-top:18px;color:var(--primary-dark);"></h2>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveCash(){
+  const amount = Number(document.getElementById("amount").value);
+  const cash = Number(document.getElementById("cash").value);
+  if(!amount || !cash){ alert("Amount fill karo"); return; }
+  document.getElementById("result").innerText = cash >= amount ? "CASH RECEIVED ✅" : "PARTIAL CASH RECEIVED ⚠";
+}
+</script>
+</body>
+</html>

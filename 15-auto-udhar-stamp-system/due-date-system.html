@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Due Date System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Due Date</div>
+    <div class="menu">
+      <a href="udhar-stamp.html">🧾 Udhar Stamp</a>
+      <a class="active">📅 Due Date System</a>
+      <a href="payment-deadline.html">⏰ Payment Deadline</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Due Date System</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <div class="form-group">
+        <label>Customer Name</label>
+        <input id="customer" placeholder="Example: Shyam Store">
+      </div>
+
+      <div class="form-group">
+        <label>Bill Date</label>
+        <input id="billDate" type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Due Days</label>
+        <select id="dueDays">
+          <option value="7">7 Days</option>
+          <option value="10">10 Days</option>
+          <option value="15">15 Days</option>
+          <option value="30">30 Days</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="saveDueDate()">Save Due Date</button>
+      <p id="result" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveDueDate(){
+  const customer = document.getElementById("customer").value.trim();
+  const days = document.getElementById("dueDays").value;
+
+  if(!customer){
+    alert("Customer name enter karo");
+    return;
+  }
+
+  document.getElementById("result").innerText =
+    customer + " ke liye due date " + days + " days set ho gayi ✅";
+}
+</script>
+</body>
+</html>

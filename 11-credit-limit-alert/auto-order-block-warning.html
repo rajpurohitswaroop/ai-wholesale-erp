@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Order Block Warning</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Order Block</div>
+    <div class="menu">
+      <a href="risky-customer-detection.html">🚨 Risky Customers</a>
+      <a class="active">🚫 Auto Order Block</a>
+      <a href="credit-limit-notifications.html">🔔 Notifications</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Order Block Warning</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Order Blocking Rule</h2>
+
+      <div class="form-group">
+        <label>Block Order After Credit Used</label>
+        <select>
+          <option>100%</option>
+          <option>110%</option>
+          <option>Owner Approval Required</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Customer Message</label>
+        <textarea rows="5">Aapki credit limit cross ho chuki hai. Order approve karne ke liye payment karein.</textarea>
+      </div>
+
+      <button class="btn btn-primary" onclick="alert('Order block warning saved ✅')">Save Rule</button>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

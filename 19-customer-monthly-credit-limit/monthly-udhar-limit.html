@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Udhar Limit</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Credit Limit</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">💳 Monthly Udhar Limit</a>
+      <a href="remaining-credit-tracking.html">📊 Remaining Credit</a>
+      <a href="blocked-orders-system.html">🚫 Block Orders</a>
+      <a href="customer-limit-settings.html">⚙ Limit Settings</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Monthly Udhar Limit</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Set Monthly Credit Limit</h2>
+
+      <div class="form-group">
+        <label>Customer Name</label>
+        <input id="customer" placeholder="Example: Shyam Store">
+      </div>
+
+      <div class="form-group">
+        <label>Monthly Udhar Limit</label>
+        <input id="limit" type="number" placeholder="Example: 50000">
+      </div>
+
+      <div class="form-group">
+        <label>Limit Month</label>
+        <input id="month" type="month">
+      </div>
+
+      <button class="btn btn-primary" onclick="saveMonthlyLimit()">Save Limit</button>
+      <p id="result" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveMonthlyLimit(){
+  const customer = document.getElementById("customer").value.trim();
+  const limit = document.getElementById("limit").value;
+
+  if(!customer || !limit){
+    alert("Customer aur limit fill karo");
+    return;
+  }
+
+  document.getElementById("result").innerText =
+    customer + " ka monthly udhar limit ₹" + limit + " saved ✅";
+}
+</script>
+</body>
+</html>

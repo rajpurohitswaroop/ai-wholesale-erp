@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment History Tracking</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Payment History</div>
+    <div class="menu">
+      <a href="auto-bill-paid-update.html">🧾 Paid Update</a>
+      <a class="active">📜 Payment History</a>
+      <a href="qr-verification-system.html">🛡 Verification</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Payment History Tracking</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Date</th><th>Bill</th><th>Amount</th><th>Mode</th><th>Status</th></tr>
+        <tr><td>Today</td><td>#1001</td><td>₹6,670</td><td>UPI</td><td><span class="status paid">Paid</span></td></tr>
+        <tr><td>Today</td><td>#1002</td><td>₹8,400</td><td>QR</td><td><span class="status paid">Paid</span></td></tr>
+        <tr><td>Yesterday</td><td>#999</td><td>₹12,500</td><td>Cash</td><td><span class="status paid">Paid</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

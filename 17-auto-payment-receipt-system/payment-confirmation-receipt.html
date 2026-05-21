@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Confirmation Receipt</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/billing.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Confirmation</div>
+    <div class="menu">
+      <a href="auto-receipt-generation.html">🧾 Receipt</a>
+      <a class="active">✅ Payment Confirmation</a>
+      <a href="pdf-receipt-download.html">📄 PDF Download</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Payment Confirmation Receipt</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="invoice-box">
+      <div class="invoice-title">Confirmed Payment Receipt</div>
+      <p>Customer: Ram Kirana</p>
+      <p>Bill No: #1001</p>
+      <p>Receipt No: RCP-1001</p>
+      <p>Paid Amount: ₹6,670</p>
+      <p>Transaction ID: UPI123456789</p>
+      <br>
+      <span class="stamp">CONFIRMED</span>
+    </div>
+
+    <br>
+    <button class="btn btn-primary" onclick="alert('Payment confirmation receipt saved ✅')">Save Receipt</button>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

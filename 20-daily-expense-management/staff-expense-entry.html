@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Expense Entry</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Expense</div>
+    <div class="menu">
+      <a href="../dashboard/staff-dashboard.html">🏠 Staff Dashboard</a>
+      <a class="active">➕ Staff Expense Entry</a>
+      <a href="daily-expense-tracking.html">📊 Daily Tracking</a>
+      <a href="expense-history.html">📜 History</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Staff Expense Entry</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Add Daily Expense</h2>
+
+      <div class="form-group">
+        <label>Expense Type</label>
+        <select id="expenseType">
+          <option>Tea</option>
+          <option>Transport</option>
+          <option>Loading</option>
+          <option>Petrol</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Amount</label>
+        <input id="amount" type="number" placeholder="Example: 250">
+      </div>
+
+      <div class="form-group">
+        <label>Note</label>
+        <textarea id="note" rows="4" placeholder="Expense detail"></textarea>
+      </div>
+
+      <button class="btn btn-primary" onclick="saveExpense()">Save Expense</button>
+      <p id="result" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveExpense(){
+  const amount = document.getElementById("amount").value;
+  if(!amount){
+    alert("Amount fill karo");
+    return;
+  }
+  document.getElementById("result").innerText = "Expense saved successfully ✅";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blocked Orders System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Blocked Orders</div>
+    <div class="menu">
+      <a href="remaining-credit-tracking.html">📊 Credit Tracking</a>
+      <a class="active">🚫 Blocked Orders</a>
+      <a href="enable-disable-option.html">🔘 Enable/Disable</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Blocked Orders System</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Order</th><th>Customer</th><th>Amount</th><th>Reason</th><th>Action</th></tr>
+        <tr>
+          <td>#1008</td>
+          <td>Raj Mart</td>
+          <td>₹7,500</td>
+          <td>Credit limit crossed</td>
+          <td><button class="btn btn-primary" onclick="alert('Owner approval sent ✅')">Request Approval</button></td>
+        </tr>
+        <tr>
+          <td>#1012</td>
+          <td>Shyam Store</td>
+          <td>₹4,200</td>
+          <td>Near monthly limit</td>
+          <td><button class="btn btn-light" onclick="alert('Order kept pending')">Keep Pending</button></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

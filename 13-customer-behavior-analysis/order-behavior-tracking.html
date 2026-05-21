@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Behavior Tracking</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Order Behavior</div>
+    <div class="menu">
+      <a href="buying-patterns.html">🛒 Buying Patterns</a>
+      <a class="active">📦 Order Behavior</a>
+      <a href="customer-loyalty-analysis.html">⭐ Loyalty</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Order Behavior Tracking</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Customer</th><th>Order Frequency</th><th>Avg Order</th><th>Behavior</th></tr>
+        <tr><td>Ram Kirana</td><td>Weekly</td><td>₹18,500</td><td><span class="status paid">Stable</span></td></tr>
+        <tr><td>Shyam Store</td><td>15 Days</td><td>₹8,000</td><td><span class="status pending">Irregular</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

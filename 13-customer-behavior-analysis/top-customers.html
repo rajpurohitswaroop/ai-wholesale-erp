@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Customers</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Customer AI</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">🏆 Top Customers</a>
+      <a href="buying-patterns.html">🛒 Buying Patterns</a>
+      <a href="customer-insights.html">📊 Insights</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Top Customers</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Rank</th><th>Customer</th><th>Total Purchase</th><th>Status</th></tr>
+        <tr><td>1</td><td>Ram Kirana</td><td>₹2,45,000</td><td><span class="status paid">VIP</span></td></tr>
+        <tr><td>2</td><td>Shyam Store</td><td>₹1,80,000</td><td><span class="status paid">Regular</span></td></tr>
+        <tr><td>3</td><td>Mahadev Mart</td><td>₹1,25,000</td><td><span class="status pending">Review</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

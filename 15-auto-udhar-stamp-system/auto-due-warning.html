@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Due Warning</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Due Warning</div>
+    <div class="menu">
+      <a href="payment-deadline.html">⏰ Deadline</a>
+      <a class="active">⚠ Auto Due Warning</a>
+      <a href="../12-auto-payment-reminder/whatsapp-reminders.html">📲 Reminder</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Due Warning</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Warning Rule</h2>
+
+      <div class="form-group">
+        <label>Warning Before Due Date</label>
+        <select>
+          <option>1 Day Before</option>
+          <option>2 Days Before</option>
+          <option>3 Days Before</option>
+          <option>On Due Date</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Warning Message</label>
+        <textarea rows="5">Aapka udhar payment due date ke paas hai. Kripya payment clear karein.</textarea>
+      </div>
+
+      <button class="btn btn-primary" onclick="alert('Auto due warning saved ✅')">Save Warning</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer-wise Monthly Control</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Customer Control</div>
+    <div class="menu">
+      <a href="monthly-udhar-limit.html">💳 Monthly Limit</a>
+      <a href="remaining-credit-tracking.html">📊 Remaining</a>
+      <a class="active">👤 Customer-wise Control</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Customer-wise Monthly Control</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Customer</th><th>Monthly Control</th><th>Limit</th><th>Order Block</th></tr>
+        <tr><td>Ram Kirana</td><td><span class="status paid">Enabled</span></td><td>₹50,000</td><td>No</td></tr>
+        <tr><td>Shyam Store</td><td><span class="status paid">Enabled</span></td><td>₹30,000</td><td>Warning</td></tr>
+        <tr><td>Mahadev Mart</td><td><span class="status pending">Custom</span></td><td>₹80,000</td><td>Owner Approval</td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

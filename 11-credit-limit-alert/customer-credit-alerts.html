@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Credit Alerts</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Credit Alert</div>
+    <div class="menu">
+      <a href="../dashboard/owner-dashboard.html">🏠 Dashboard</a>
+      <a class="active">👤 Customer Credit Alerts</a>
+      <a href="warning-system.html">⚠ Warning System</a>
+      <a href="risky-customer-detection.html">🚨 Risky Customers</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Customer Credit Alerts</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Customer</th><th>Credit Limit</th><th>Used</th><th>Status</th></tr>
+        <tr><td>Ram Kirana</td><td>₹50,000</td><td>₹42,000</td><td><span class="status pending">Near Limit</span></td></tr>
+        <tr><td>Shyam Store</td><td>₹30,000</td><td>₹32,500</td><td><span class="status danger">Limit Crossed</span></td></tr>
+        <tr><td>Mahadev Mart</td><td>₹80,000</td><td>₹45,000</td><td><span class="status paid">Safe</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

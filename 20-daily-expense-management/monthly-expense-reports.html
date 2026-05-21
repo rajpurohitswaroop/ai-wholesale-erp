@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Expense Reports</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Expense Report</div>
+    <div class="menu">
+      <a href="daily-expense-tracking.html">📊 Daily</a>
+      <a class="active">🗓 Monthly Reports</a>
+      <a href="expense-analytics.html">📈 Analytics</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Monthly Expense Reports</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="grid">
+      <div class="card stat"><h3>Total Expense</h3><h2>₹48,000</h2></div>
+      <div class="card stat"><h3>Transport</h3><h2>₹18,500</h2></div>
+      <div class="card stat"><h3>Loading</h3><h2>₹12,000</h2></div>
+      <div class="card stat"><h3>Other</h3><h2>₹17,500</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>Report Action</h2>
+      <button class="btn btn-primary" onclick="alert('Monthly expense report generated ✅')">Generate Report</button>
+      <button class="btn btn-light" onclick="window.print()">Print Report</button>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

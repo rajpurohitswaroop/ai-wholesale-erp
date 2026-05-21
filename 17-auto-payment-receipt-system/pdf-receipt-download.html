@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Receipt Download</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/billing.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">PDF Receipt</div>
+    <div class="menu">
+      <a href="receipt-history.html">📜 History</a>
+      <a class="active">📄 PDF Receipt Download</a>
+      <a href="whatsapp-receipts.html">📲 WhatsApp</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>PDF Receipt Download</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="invoice-box" id="receiptArea">
+      <div class="invoice-title">RAJ WHOLESALE</div>
+      <h2>Payment Receipt</h2>
+      <p>Receipt No: RCP-1001</p>
+      <p>Customer: Ram Kirana</p>
+      <p>Amount: ₹6,670</p>
+      <p>Mode: UPI</p>
+      <p>Status: Payment Received</p>
+      <br>
+      <span class="stamp">PAID</span>
+    </div>
+
+    <br>
+    <button class="btn btn-primary" onclick="window.print()">Download / Print PDF</button>
+  </main>
+</div>
+<script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

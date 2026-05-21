@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Receipts</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">WhatsApp Receipt</div>
+    <div class="menu">
+      <a href="auto-receipt-generation.html">🧾 Auto Receipt</a>
+      <a class="active">📲 WhatsApp Receipts</a>
+      <a href="payment-confirmation-receipt.html">✅ Confirmation</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>WhatsApp Receipts</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card table-card">
+      <table>
+        <tr><th>Customer</th><th>Amount</th><th>WhatsApp</th><th>Action</th></tr>
+        <tr><td>Ram Kirana</td><td>₹6,670</td><td>+91XXXXXX111</td><td><button class="btn btn-primary" onclick="sendReceipt('Ram Kirana')">Send</button></td></tr>
+        <tr><td>Shyam Store</td><td>₹8,400</td><td>+91XXXXXX222</td><td><button class="btn btn-primary" onclick="sendReceipt('Shyam Store')">Send</button></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function sendReceipt(name){
+  alert("WhatsApp receipt sent to " + name + " ✅");
+}
+</script>
+</body>
+</html>

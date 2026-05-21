@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Reminder System</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body onload="loadDashboard()">
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">Auto Reminder</div>
+    <div class="menu">
+      <a href="whatsapp-reminders.html">📲 WhatsApp</a>
+      <a class="active">🤖 Auto Reminder</a>
+      <a href="auto-scheduled-reminders.html">⏰ Scheduled</a>
+      <a href="due-payment-alerts.html">🚨 Due Alerts</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Auto Reminder System</h1>
+      <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card">
+      <h2>Auto Reminder Rule</h2>
+
+      <div class="form-group">
+        <label>Reminder Type</label>
+        <select id="type">
+          <option>Before Due Date</option>
+          <option>On Due Date</option>
+          <option>After Due Date</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Reminder Days</label>
+        <input id="days" type="number" placeholder="Example: 3">
+      </div>
+
+      <button class="btn btn-primary" onclick="saveAutoReminder()">Save Auto Reminder</button>
+      <p id="msg" style="margin-top:15px;color:var(--primary-dark);font-weight:800;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/dashboard.js"></script>
+<script>
+function saveAutoReminder(){
+  const days = document.getElementById("days").value;
+  if(!days){ alert("Reminder days enter karo"); return; }
+  document.getElementById("msg").innerText = "Auto reminder rule saved ✅";
+}
+</script>
+</body>
+</html>
