@@ -1,0 +1,62 @@
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .report-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stock-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .dashboard {
+    display: block;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .whatsapp-layout,
+  .billing-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid,
+  .stock-grid,
+  .report-summary,
+  .language-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    display: block;
+  }
+
+  .topbar h1 {
+    margin-bottom: 14px;
+  }
+
+  .auth-box {
+    width: 100%;
+    padding: 26px;
+  }
+
+  .payment-options {
+    grid-template-columns: 1fr;
+  }
+}

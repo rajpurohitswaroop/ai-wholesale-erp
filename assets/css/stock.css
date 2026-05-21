@@ -1,0 +1,42 @@
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stock-card {
+  border-left: 5px solid var(--primary);
+}
+
+.low-stock {
+  border-left-color: var(--danger);
+}
+
+.stock-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stock-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.stock-ok {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.stock-low {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.stock-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
