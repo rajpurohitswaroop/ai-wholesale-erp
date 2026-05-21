@@ -1,0 +1,69 @@
+AI WHOLESALE ERP SETUP GUIDE
+
+1. Install Python
+Download and install Python 3.11+
+
+2. Install Node.js
+Download and install Node.js LTS version
+
+3. Open Project Folder
+Open ai-wholesale-agent in VS Code
+
+4. Backend Setup
+Open terminal:
+
+cd backend
+
+Install requirements:
+
+pip install -r requirements.txt
+
+Run backend:
+
+python app.py
+
+5. Frontend Setup
+Open new terminal:
+
+cd frontend
+
+Install packages:
+
+npm install
+
+Run frontend:
+
+npm start
+
+6. Start Full Project
+Double click:
+
+start-project.bat
+
+Project will auto start.
+
+7. Technologies Used
+
+Backend:
+Python + Flask
+
+Frontend:
+React.js
+
+Database:
+SQLite
+
+8. Features
+
+- Smart Billing
+- GST Billing
+- WhatsApp Orders
+- Voice Orders
+- QR Payments
+- Customer Analysis
+- Stock Management
+- Expense Management
+- Reports Engine
+- Multi Language Support
+
+END OF GUIDE
